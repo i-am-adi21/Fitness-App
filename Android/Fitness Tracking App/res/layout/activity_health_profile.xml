@@ -1,0 +1,81 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/diet_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".HealthProfile" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:layout_gravity="center"
+	        android:text="Health profile"
+	        android:textSize="20dp" />
+	
+	    <EditText
+	        android:id="@+id/ed_bp"
+	        android:inputType="number"
+	        android:layout_width="180dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="20dp"
+	        android:layout_gravity="center"
+	        android:hint="Blood pressure" />
+	
+	    <EditText
+	        android:id="@+id/ed_sugar"
+	        android:inputType="numberDecimal"
+	        android:layout_width="180dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:layout_gravity="center"
+	        android:hint="Sugar level" />
+	
+	    <EditText
+	        android:id="@+id/ed_cholestrol"
+	        android:inputType="numberDecimal"
+	        android:layout_width="180dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:layout_gravity="center"
+	        android:hint="Cholestrol" />
+	
+	    <EditText
+	        android:id="@+id/ed_weight"
+	        android:inputType="numberDecimal"
+	        android:layout_width="180dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:layout_gravity="center"
+	        android:hint="Weight" />
+	
+	    <EditText
+	        android:id="@+id/ed_height"
+	        android:inputType="numberDecimal"
+	        android:layout_width="180dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:layout_gravity="center"
+	        android:hint="Height" />
+
+	    <Button
+	        android:id="@+id/bt_submit"
+	        style="?android:attr/buttonStyleSmall"
+	        android:layout_width="120dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginTop="20dp"
+	        android:text="Submit" />
+
+    </LinearLayout>
+
+</ScrollView>

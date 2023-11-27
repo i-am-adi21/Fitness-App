@@ -1,0 +1,49 @@
+{% include 'publicheader.html'%}
+<center>
+		<form method="post">
+			<h2>Donor Registration</h2>
+			<br>
+			<br>
+	<table align="center">
+		<tr>
+			<th>First Name</th>
+			<td><input type="text" name="fname" required="" pattern="[A-za-z /s]{0,20}"></td>
+		</tr>
+		<tr>
+			<th>Last Name</th>
+			<td><input type="text" name="lname" required="" pattern="[A-za-z /s]{0,20}"></td>
+		</tr>
+		<tr>
+			<th>Blood Group</th>
+			<td><select name="Group">
+				<option>Select</option>
+				<option>A+ve</option>
+				<option>B+ve</option>
+				<option>AB+ve</option>
+				<option>0+ve</option>
+				<option>A-ve</option>
+				<option>B-ve</option>
+				<option>AB-ve</option>
+				<option>0-ve</option>
+			</select></td>
+		</tr>
+		<tr>
+			<th>Date of Birth</th>
+			<td><input type="date" name="dob" required="" max="2000-01-01"></td>
+		</tr>
+		<tr>
+			<th>Gender</th>
+			<td>Female<input type="radio" name="Gender" value="female" required="">
+			Male<input type="radio" name="Gender" value="Male"></td>
+		</tr>
+		<tr>
+			<th>phone</th>
+			<td><input type="text" name="ph" required="" pattern="[0-9]{10}"></td>
+		</tr>
+		<tr>
+			<td align="center"><input type="submit" name="submit" value="Register"></td>
+		</tr>
+	</table>
+	</form>
+</center>
+{% include 'footer.html'%}

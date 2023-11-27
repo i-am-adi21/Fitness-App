@@ -1,0 +1,206 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/diet_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SignUp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin" >
+	    
+        <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:text="SignUp"
+	        android:textSize="20dp" />
+	
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+	        
+		    <EditText
+		        android:id="@+id/ed_fname"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:hint="First name"
+		        android:inputType="textPersonName" >
+		
+		        <requestFocus />
+		    </EditText>
+		</TableRow>
+	
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+		    
+		    <EditText
+		        android:id="@+id/ed_lname"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:hint="Last name"
+		        android:inputType="textPersonName" />
+		</TableRow>
+		
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+		    
+		    <EditText
+		        android:id="@+id/ed_dob"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:hint="DOB"
+		        android:inputType="date" />
+		</TableRow>
+		
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+		    
+	        <TextView
+	            android:text="Gender"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="25dp" />
+	        
+	        <RadioGroup
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical" >
+	            
+	            <RadioButton
+	                android:id="@+id/rb_male"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:checked="true"
+	                android:text="Male" />
+	            
+	            <RadioButton
+	                android:id="@+id/rb_female"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Female" />
+	            
+	            <RadioButton
+	                android:id="@+id/rb_other"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Other" />
+	        </RadioGroup>
+	    </TableRow>
+	    
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+		    
+		    <EditText
+		        android:id="@+id/ed_place"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:hint="Place"
+		        android:inputType="textPersonName" />
+		</TableRow>
+	
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+		    
+		    <EditText
+		        android:id="@+id/ed_phone"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:hint="Phone number"
+		        android:inputType="phone" />
+		</TableRow>
+	
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+		    
+		    <EditText
+		        android:id="@+id/ed_email"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:hint="Email ID"
+		        android:inputType="textEmailAddress" />
+		</TableRow>
+		
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+		    
+		    <EditText
+		        android:id="@+id/ed_username"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:hint="Username"
+		        android:inputType="textEmailAddress" />
+		</TableRow>
+		
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+		    
+		    <EditText
+		        android:id="@+id/ed_password"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:hint="Password"
+		        android:inputType="textPassword" />
+		</TableRow>
+	
+	    <TableRow
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="12dp"
+	        android:gravity="center" >
+	        
+		    <Button
+		        android:id="@+id/bt_register"
+		        style="?android:attr/buttonStyleSmall"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Register" />
+	
+	    </TableRow>
+	
+	</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,25 @@
+{% include 'adminheader.html'%}
+
+	<table align="center"   class="table"  style="width: 500px">
+		<h2 align="center">View Walking Detials</h2>
+		<tr>
+			<th>User</th>
+			<th>step Count</th>
+			<th>walking date</th>
+		</tr>
+
+		<tbody>
+			{% for row in data['viewfeed'] %}
+			<tr>
+				<td>{{row['fname']}}</td>
+
+				
+				<td>{{row['steps_count']}}</td>
+
+				<td>{{row['walkingdate']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</form>
+	{% include 'footer.html' %}

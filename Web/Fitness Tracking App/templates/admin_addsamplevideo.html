@@ -1,0 +1,39 @@
+{% include 'mainadminheader.html'%}
+<form method="post"  enctype="multipart/form-data">
+	<table align="center" class="table"  style="width: 500px">
+		<h2 align="center">Add Sample Video</h2>
+		<tr>
+			<th>Video</th>
+			<td><input type="file"  class="form-control" name="img"></ins></td>
+		</tr>
+
+		<tr>
+			<th>Name</th>
+			<td><input type="text"  class="form-control" name="name"></ins></td>
+		</tr>
+		<tr><td align="center"  colspan="2"><input  class="btn btn-success" type="submit" name="submit" value="Add suggestion"></td></tr>
+	</table>
+	<table align="center"   class="table"  style="width: 500px">
+		<h2 align="center">View Sample Video</h2>
+		<tr>
+			<th>Video</th>
+			<th>Name</th>
+		</tr>
+
+		<tbody>
+			{% for row in data['viewfeed'] %}
+			<tr>
+
+				<td><video width="320" height="240" controls>
+  <source src="/{{row['path']}}" type="video/mp4">
+  <source src="/{{row['path']}}" type="video/ogg">
+
+</video>
+				</td>
+				<td>{{row['name']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</form>
+	{% include 'footer.html' %}

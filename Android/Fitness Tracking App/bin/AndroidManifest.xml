@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dietapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+     <uses-feature
+        android:name="android:hardware.sensor.accelerometer"
+        android:required="true" />
+     
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/diet_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.dietapp.IpSettings"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.dietapp.Login"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.UserHome"
+            android:label="@string/title_activity_user_home" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.SignUp"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.HealthProfile"
+            android:label="@string/title_activity_add_health_profile" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.FoodIntake"
+            android:label="@string/title_activity_food_intake" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.ViewDiscussions"
+            android:label="@string/title_activity_view_discussions" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.Feedbacks"
+            android:label="@string/title_activity_feedbacks" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.DiscussionDetails"
+            android:label="@string/title_activity_discussion_details" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.ViewSuggestions"
+            android:label="@string/title_activity_view_suggestions" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.ViewDonors"
+            android:label="@string/title_activity_view_donors" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.Viewdietrules"
+            android:label="@string/title_activity_viewdietrules" >
+        </activity>
+        <activity
+            android:name="com.example.dietapp.Walkingdetails"
+            android:label="@string/title_activity_walkingdetails" >
+        </activity>
+    </application>
+
+</manifest>

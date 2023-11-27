@@ -1,0 +1,44 @@
+{% include 'adminheader.html' %}
+<form method="post">
+	<table align="center" class="table" style="width: 1000px">
+		<h3 align="center">View User</h3>
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				Place
+			</th>
+			<th>
+				Phone
+			</th>
+			<th>
+				Email
+			</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewuser'] %}
+			<tr>
+				<td>{{row['Name']}}</td>
+				<td>{{row['place']}}</td>
+				<td>{{row['phone']}}</td>
+				<td>{{row['email']}}</td>
+				<td><a href="/admin/viewfoodintake?id={{row['userid']}}">View FoodIntake</a></td>
+
+		<!-- 		<td><a href="/admin/admin_addsamplevideo?id={{row['userid']}}">add sample video</a></td> -->
+				<td><a href="/admin/admin_addwalkingdetails?id={{row['userid']}}">add walking details</a></td>
+			<!-- 	<td><a href="/admin/suggest?id={{row['userid']}}">Diet suggest</a></td>
+
+
+				<td><a href="/admin/admin_view?id={{row['userid']}}">Diet suggest</a></td> -->
+
+
+				<td><a href="/admin/employee_chat_customer?receiver_id={{row['userid']}}">Chat</a></td>
+
+
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</form>
+{% include 'footer.html' %}

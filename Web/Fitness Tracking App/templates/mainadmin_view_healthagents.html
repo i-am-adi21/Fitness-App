@@ -1,0 +1,40 @@
+{% include 'mainadminheader.html' %}
+<form method="post">
+	<table align="center" class="table" style="width: 1000px">
+		<h3 align="center">View Health Agents</h3>
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				DOB
+			</th>
+			<th>
+				Gender
+			</th>
+			<th>
+				Phone
+			</th>
+			<th>
+				Qualification
+			</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewagent'] %}
+			<tr>
+				<td>{{row['fname']}} {{row['lname']}}</td>
+				<td>{{row['dob']}}</td>
+				<td>{{row['gender']}}</td>
+				<td>{{row['phone']}}</td>
+				<td>{{row['qualification']}}</td>
+				{% if row['type']=="pending" %}
+				<td><a href="?aid={{row['logid']}}">Accept</a> 
+					<a href="?rid={{row['logid']}}">Reject</a>
+				</td>
+				{% endif %}
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</form>
+{% include 'footer.html' %}

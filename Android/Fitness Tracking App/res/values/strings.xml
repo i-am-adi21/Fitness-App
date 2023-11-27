@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DietApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_user_home">UserHome</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_add_health_profile">AddHealthProfile</string>
+    <string name="title_activity_food_intake">FoodIntake</string>
+    <string name="title_activity_view_discussions">ViewDiscussions</string>
+    <string name="title_activity_feedbacks">Feedbacks</string>
+    <string name="title_activity_discussion_details">DiscussionDetails</string>
+    <string name="title_activity_view_suggestions">ViewSuggestions</string>
+    <string name="title_activity_view_donors">ViewDonors</string>
+    <string name="title_activity_viewdietrules">Viewdietrules</string>
+    <string name="title_activity_walkingdetails">Walkingdetails</string>
+
+</resources>

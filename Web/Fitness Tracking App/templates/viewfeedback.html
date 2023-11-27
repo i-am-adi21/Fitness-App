@@ -1,0 +1,27 @@
+{% include 'adminheader.html'%}
+<form method="post">
+	<table align="center" class="table" style="width: 1000px">
+		<h2 align="center"><u>View Feedback</u></h2><br><br>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Date</th>
+			<th>Reply</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewuser'] %}
+			<tr>
+				<th>{{row['fname']}}</th>
+				<th>{{row['Description']}}</th>
+				<th>{{row['feedback_date']}}</th>
+				{% if row['reply'] == "pending" %}
+				<td><input type="text" name="reply{{loop.index}}"><input type="submit" name="submit{{loop.index}}" value="Submit"></td>
+				{% else %}
+				<td>{{row['reply']}}</td>	
+				{% endif %}
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</form>
+{% include 'footer.html'%}

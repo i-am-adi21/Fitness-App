@@ -1,0 +1,28 @@
+{% include 'adminheader.html'%}
+<form method="post">
+	<table align="center" border="1">
+		<h2 align="center">Add Suggestiopn</h2>
+		<tr>
+			<th>Suggestion</th>
+			<td><input type="text" name="sug"></ins></td>
+		</tr>
+		<tr><td align="center" colspan="2"><input type="submit" name="submit" value="Add suggestion"></td></tr>
+	</table>
+	<table align="center" border="1">
+		<h2 align="center">View Suggestion</h2>
+		<tr>
+			<th>Suggestion</th>
+			<th>Date</th>
+		</tr>
+
+		<tbody>
+			{% for row in data['viewsug'] %}
+			<tr>
+				<td>{{row['suggested_diet_details']}}</td>
+				<td>{{row['suggestion_date']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</form>
+	{% include 'footer.html' %}

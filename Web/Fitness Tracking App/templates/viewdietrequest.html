@@ -1,0 +1,35 @@
+{% include 'adminheader.html'%}
+<form method="post">
+	<table align="center" border="1" class="table" style="width: 1000px">
+		<h2 align="center"><u>View Diet Request</u></h2>
+		<tr>
+	        <th>Name</th>
+	        <th>Request</th>
+	        <th>Date</th>
+	        <th>Status</th>
+	      
+		</tr>
+		<tbody>
+			{% for row in data['viewfood'] %}
+			<tr>
+				<td>{{row['fname']}}</td>
+				<td>{{row['request']}}</td>
+				<td>{{row['date']}}</td>
+				<td>{{row['status']}}</td>
+
+				{% if row['status']=="pending"%}
+				<td><a href="?action=accept&did={{row['dietsrequest_id']}}">accept</a></td>
+				<td><a href="?action=reject&did={{row['dietsrequest_id']}}">reject</a></td>
+				{% endif %}
+
+
+				{% if row['status']=="accept"%}
+				<td><a href="suggest?did={{row['dietsrequest_id']}}">Add Suggesions</a></td>
+			
+				{% endif %}
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</form>
+{% include 'footer.html' %}

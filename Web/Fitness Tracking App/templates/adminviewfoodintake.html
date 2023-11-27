@@ -1,0 +1,72 @@
+{% include 'adminheader.html' %}
+<form  method="post">
+	<table align="center" border="1">
+
+	<table align="center" class="table"  style="width: 500px">
+
+		<form  method="post">
+		<h2 align="center">Add Food Intake</h2>
+		<tr>
+			<th>Food Details</th>
+			<td><input type="text"  class="form-control" name="food"></ins></td>
+		</tr>
+
+		<tr>
+			<th>Quantity</th>
+			<td><input type="text"  class="form-control" name="qty"></ins></td>
+		</tr>
+
+		<tr>
+			<th>In Time</th>
+			<td><input type="text"  class="form-control" name="time"></ins></td>
+		</tr>
+
+
+		<tr>
+			<th>Calories</th>
+
+			<td><input type="text"  class="form-control" name="cal"></ins></td>
+		</tr>
+
+
+		<tr><td align="center"  colspan="2"><input  class="btn btn-success" type="submit" name="submit" value="Add suggestion"></td></tr>
+
+		</form>
+	</table>
+
+<center>
+	<h2 align="center">View Food in take</h2>
+
+	<table  class="table" style="width: 500px">
+	<tr>
+		<th>food details</th>
+		<th>
+			Quantity
+		</th>
+		
+		<th>
+			Time
+		</th>
+
+		<th>Calories</th>
+	</tr>
+
+	
+			{% for row in data['viewfeed'] %}
+			<tr>
+				<td>{{row['fooddetails']}}</td>
+				<td>{{row['Quantity']}}</td>
+				
+				<td>{{row['intime']}}</td>
+				<td>{{row['Calories']}}</td>
+				<!-- <td><a href="/admin/suggest?id={{row['userid']}}">Add Suggestion</td> -->
+			</tr>
+			{% endfor %}
+
+	
+	</table>
+	
+</form>
+
+</center>
+{% include 'footer.html' %}

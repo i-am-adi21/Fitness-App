@@ -1,0 +1,36 @@
+{% include 'adminheader.html'%}
+<form method="post"  enctype="multipart/form-data">
+	<table align="center" class="table"  style="width: 500px">
+		<h2 align="center">Add Excersice Video</h2>
+		<tr>
+			<th>Video</th>
+			<td><input type="file"  class="form-control" name="img"></ins></td>
+		</tr>
+
+		
+		<tr><td align="center"  colspan="2"><input  class="btn btn-success" type="submit" name="submit" value="Add suggestion"></td></tr>
+	</table>
+	<table align="center"   class="table"  style="width: 500px">
+		<h2 align="center">View Excersice Video</h2>
+		<tr>
+			<th>Video</th>
+			<th>Date</th>
+		</tr>
+
+		<tbody>
+			{% for row in data['viewfeed'] %}
+			<tr>
+
+				<td><video width="320" height="240" controls>
+  <source src="/{{row['video']}}" type="video/mp4">
+  <source src="/{{row['video']}}" type="video/ogg">
+
+</video>
+				</td>
+				<td>{{row['date']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</form>
+	{% include 'footer.html' %}

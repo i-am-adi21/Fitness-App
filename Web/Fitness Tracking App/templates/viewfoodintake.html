@@ -1,0 +1,46 @@
+{% include 'adminheader.html' %}
+
+<center>
+	<h2 align="center">View Food in take</h2>
+
+	<table  class="table" style="width: 500px">
+	<tr>
+		<th>User</th>
+
+		<th>food details</th>
+		<th>
+			Quantity
+		</th>
+		
+		<th>
+			Time
+		</th>
+
+		<th>Calories</th>
+		<th>Status</th>
+		<th>Date</th>
+	</tr>
+
+	
+			{% for row in data['viewfood'] %}
+			<tr>
+				<td>{{row['fname']}}</td>
+
+				<td>{{row['fooddetails']}}</td>
+				<td>{{row['quantity']}}</td>
+				<td>{{row['time']}}</td>
+				
+				<td>{{row['Calories']}}</td>
+				<td>{{row['status']}}</td>
+				<td>{{row['date']}}</td>
+			<!-- 	<td><a href="/admin/suggest?id={{row['userid']}}">Add Suggestion</td> -->
+			</tr>
+			{% endfor %}
+
+	
+	</table>
+	
+</form>
+
+</center>
+{% include 'footer.html' %}

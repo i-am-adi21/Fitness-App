@@ -1,0 +1,33 @@
+{% include 'adminheader.html'%}
+<form  method="post">
+	<table align="center"  class="table" style=" width: 500px">
+		<h3 align="center"><u>ADD DISCUSSION</u></h3>
+		<tr>
+			<th>Title</th>
+			<td><input type="text" name="Title" required=" " class="form-control"></td>
+		</tr>
+		<tr>
+			<th>Date</th>
+			<td><input type="date" name="date" required=" " class="form-control"></td>
+		</tr>
+		<tr><td align="center" colspan="2"><input type="submit" name="submit" value="submit"></td></tr>
+	</table>
+	<br><br>
+	<h2 align="center">VIEW DISCUSSION</h2>
+	<table align="center"  class="table" style=" width: 1000px">
+		<tr>
+			<th>Title</th>
+			<th>Date</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewdisc'] %}
+			<tr>
+				<td>{{row['title']}}</td>
+				<td>{{row['created_date']}}</td>
+				<td><a href="/admin/participants?id={{row['master_id']}}">View Participants</a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</form>
+{% include 'footer.html' %}

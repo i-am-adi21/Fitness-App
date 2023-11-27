@@ -1,0 +1,36 @@
+
+{% include 'adminheader.html'%}
+<form  method="post">
+	<center>
+	<table class="table" style="width: 500px">
+		<h3 align="center"><u>ADD DIET RULES</u></h3>	<br><br>
+		<tr>
+			<th>Title</th>
+			<td><input type="text" name="Title" required="" class="form-control" style="width: 500px"></td>
+		</tr>
+		<tr>
+			<th>Description</th>
+			<td><input type="text" name="desc" required="" class="form-control" style="width: 500px"></td>
+		</tr>
+		<tr><td align="center" colspan="2"><input type="submit" name="submit" value="submit"></td></tr>
+	</table>
+
+	<br><br>	<br><br>	<br><br>
+	<table align="center" border="1" class="table" style="width: 1000px">
+		<h3 align="center"><u>VIEW DIET RULES</u></h3>	<br><br>
+		<tr>
+			<th>Title</th>
+			<th>Description</th>
+		</tr>
+		<tbody>
+			{% for row in data['viewdiet'] %}
+			<tr>
+				<td>{{row['title']}}</td>
+				<td>{{row['description']}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</center>
+</form>
+{% include 'footer.html' %}
